@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+#root,
+.app {
+  height: 100%;
+  background-color: white;
+  @apply text-black;
+}
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(black, black);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(text-black, text-black);
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+.a-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(black, black);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.a-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(text-black, text-black);
+}
+
+.a-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#progress .indicator {
+  stroke: var(--accent);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  height: 300px;
+  overflow-x: scroll;
+  padding: 20px 0;
+  flex: 0 0 600px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: #fff3;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: #fff3;
+}
+
+li {
+  flex: 0 0 200px;
+  background: var(--accent);
+  margin: 0 20px 0 0;
+}
+
+li:last-of-type {
+  margin: 0;
+}
